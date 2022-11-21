@@ -90,29 +90,26 @@ function update_mahasiswa($post) {
 
 
 // fungsi tambah presensi
-function create_presensi($post) {
+// function create_presensi($post) {
 
-  global $conn;
+//   global $conn;
 
-  // $tgl_presensi    = date['Y-m-d'];
-  $makul           = $_POST['makul'];
-  $kelas           = $_POST['kelas'];
-  $nim             = $_POST['nim'];
-  $nama            = $_POST['nama'];
-  $status_presensi = $_POST['status_presensi'];
+
+//   $makul           = $_POST['makul'];
+//   $kelas           = $_POST['kelas'];
+//   $nim             = $_POST['nim'];
+//   $nama            = $_POST['nama'];
+//   $status_presensi = $_POST['status_presensi'];
   
 
 
+//   // query tambah
+//   $query = "INSERT INTO presensi VALUES( CURRENT_TIMESTAMP() , '$makul', '$kelas',  '$nim', '$nama', '$status_presensi' )";
 
+//   mysqli_query($conn, $query);
 
-
-  // query tambah
-  $query = "INSERT INTO presensi VALUES( '$tgl_presensi', '$makul', '$kelas',  '$nim', '$nama', '$status_presensi' )";
-
-  mysqli_query($conn, $query);
-
-  return mysqli_affected_rows($conn);
-}
+//   return mysqli_affected_rows($conn);
+// }
 
 
 
