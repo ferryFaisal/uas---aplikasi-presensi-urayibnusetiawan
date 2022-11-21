@@ -149,7 +149,7 @@ $jumlah_presensi = mysqli_num_rows($data_presensi);
                             <div class="card-body-icon">
                                 <i class="fas far fa-user-circle"></i>
                             </div>
-                            <div class="mr-5 font-italic font-weight-bold">Tables Presensi: </div>
+                            <div class="mr-5 font-italic font-weight-bold">Tables Presensi: <?= $jumlah_presensi; ?> </div>
                         </div>
                         <a class="card-footer text-white clearfix small z-1" href="tables_presensi.php">
                             <span class="float-left">View Details</span>
