@@ -116,31 +116,28 @@ $data_presensi = select("SELECT * FROM presensi");
               <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                   <tr class="text-center">
+                    <th>No</th>
                     <th>Date Presensi</th>
                     <th>Mata Kuliah</th>
                     <th>Kelas</th>
                     <th>NIM</th>
                     <th>Nama</th>
                     <th>Status Presensi</th>
-                    <th>Aksi</th>
                   </tr>
                 </thead>
                 
                 <tbody>
+                  <?php $no = 1;?>
                   <?php foreach ($data_presensi as $presensi) : ?>
+                    
                   <tr class="text-center">
+                      <td><?= $no++; ?></td>
                       <td><?= $presensi['tgl_presensi'];?></td>
                       <td><?= $presensi['makul']?></td>
                       <td><?= $presensi['kelas'];?></td>
                       <td><?= $presensi['nim']?></td>
                       <td><?= $presensi['nama']?></td>
                       <td><?= $presensi['status_presensi']?></td>
-                      <td class="text-center" >
-                      <a href="#" class="btn btn-success ">
-                      <i class="fa fa-edit" ></i> Edit</a>   
-                      <a href="hapus-customers.php?nim=<?= $presensi['nim']; ?>" onclick="return confirm('Anda yakin ingin menghapus record ini?')"class="btn btn-danger ">
-                      <i class="fa fa-trash-alt" ></i> Hapus</a> 
-                      </td>
                   </tr>
                   <?php endforeach; ?>
                 </tbody>
